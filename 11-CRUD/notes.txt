@@ -1,0 +1,18 @@
+Projet CRUD (Create, Read, Update, Delete)
+
+dossier : app
+    - config.xml
+dossier : model
+    - EntityRepository.php
+dossier : view
+    - layout.php 
+dossier : controller
+    - Controller.php
+
+
+A la racine du dossier Crud :
+
+ - autoload.php
+ - index.php
+
+
