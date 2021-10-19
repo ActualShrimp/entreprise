@@ -19,6 +19,8 @@ class Controller
         {
             if($op == 'add'|| $op == 'update')
                 $this->save();
+            elseif($op == 'search')
+                $this->search();
             elseif($op == 'select')
                 $this->select();
             elseif($op == 'delete') 
