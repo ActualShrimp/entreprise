@@ -52,7 +52,12 @@ class EntityRepository
         return $r;
     }
 
-
+    public function searchEntityRepo($name)
+    {
+        $data = $this->getDb()->query("SELECT * FROM " . $this->table . " WHERE name_" . $this->table . " = " . $name);
+        $r = $data->fetch(\PDO::FETCH_ASSOC);
+        return $r;
+    }
     
     public function selectEntityRepo($id)
     {
