@@ -46,20 +46,11 @@
 
     <div class="container" style="min-height: 800px;">
 
-
-        <!-- affichage des templates stockés dans la variables $content dans la méthode render() du controller -->
         <?= $content; ?>
-
 
     </div>
 
-
-
-
-    <footer class="jumbotron" style="background-color: #7952B3; min-height: 80px;">
-
-
-    </footer>
+    <footer class="jumbotron" style="background-color: #7952B3; min-height: 80px;"></footer>
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
