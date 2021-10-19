@@ -31,7 +31,7 @@ class Controller
             echo $e->getMessage();
         }
     }
-    
+
     public function render($layout, $template, $parameters = array())
     {
         extract($parameters);
@@ -46,6 +46,19 @@ class Controller
         require "view/$layout";
 
         return ob_end_flush();
+    }
+
+    public function search()
+    {
+        $nom = isset($_GET['nom']) ? $_GET['nom'] : NULL;
+        var_dump($nom);
+
+        $this->render('layout.php', 'affichage-employes.php', [
+            'title' => "Détail de l'employé n°$nom",
+            'data' => $this->dbEntityRepository->selectAllEntityRepo($nom),
+            'fields' => $this->dbEntityRepository->getFields(),
+            'nom' => 'nom_' . $this->dbEntityRepository->table
+        ]);
     }
 
     public function selectAll()
