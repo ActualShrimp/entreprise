@@ -52,9 +52,9 @@ class EntityRepository
         return $r;
     }
 
-    public function searchEntityRepo($nom)
+    public function searchEntityRepo($prenom)
     {
-        $data = $this->getDb()->query("SELECT * FROM " . $this->table . " WHERE nom_" . $this->table . " = " . $nom);
+        $data = $this->getDb()->query("SELECT * FROM " . $this->table . " WHERE prenom_" . $this->table . " = " . $prenom);
         $r = $data->fetch(\PDO::FETCH_ASSOC);
         return $r;
     }

@@ -50,14 +50,13 @@ class Controller
 
     public function search()
     {
-        $nom = isset($_GET['nom']) ? $_GET['nom'] : NULL;
-        var_dump($nom);
+        $prenom = isset($_GET['nom']) ? $_GET['nom'] : NULL;
+        var_dump($prenom);
 
         $this->render('layout.php', 'affichage-employes.php', [
-            'title' => "Détail de l'employé n°$nom",
-            'data' => $this->dbEntityRepository->selectAllEntityRepo($nom),
+            'data' => $this->dbEntityRepository->selectAllEntityRepo($prenom),
             'fields' => $this->dbEntityRepository->getFields(),
-            'nom' => 'nom_' . $this->dbEntityRepository->table
+            'prenom' => 'prenom_' . $this->dbEntityRepository->table
         ]);
     }
 
